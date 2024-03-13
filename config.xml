@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="mathcheatobj" class="com.bis.mi.springcore_DI_injecting_objects.Mathcheat"/>
+    <bean id="stu" class="com.bis.mi.springcore_DI_injecting_objects.Student">
+    	<property name="id" value="1"></property>
+    	<property name="cheat" ref="mathcheatobj"></property>
+    </bean>
+    <bean id="ano" class="com.bis.mi.springcore_DI_injecting_objects.AnotherStudent">
+    	<property name="cheatt" ref="mathcheatobj"></property>
+    </bean>
+</beans>
